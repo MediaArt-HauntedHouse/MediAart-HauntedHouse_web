@@ -3,3 +3,17 @@ h2,
 h3,
 h4
   color: $DarkGray
+
+.panel-default
+  ul
+    list-style: none
+    padding: 0
+    li:first-child,
+    li:last-child
+      text-align: center
+    li:first-child
+      font-weight: bold
+    li:not(:first-child)
+      border-top: 1px solid $LightGray
+    li
+      padding: 4px 0
