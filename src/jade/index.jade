@@ -7,8 +7,8 @@ block contents
   .col-xs-12
     .row.top-heading
       .container.text-center
-        h1 メディアアートお化け屋敷
-        p
+        img.top-heading_image(src='image/logo.svg' type="image/svg+xml" width="400" height="400")
+        p.lead
           |学園祭の定番と言えば
           span.line-marker 『お化け屋敷』。
           br
@@ -21,92 +21,143 @@ block contents
   .container
     section
       .page-header.text-center
-        h2 企画
+        h2
+          img(src='image/web.svg' type="image/svg+xml")
+          |企画
       .page-content.clearfix
-        h3.text-center >> 近日公開 <<
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
-        //- .col-xs-4
-        //-   .panel.panel-default
-        //-     .panel-body
-        //-       p hoge
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p 目玉
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p 投影
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p エレベータ
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p ARアプリ
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p グッズ
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p 写真加工
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p CM
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p Web
+        .col-xs-4
+          .panel.panel-default
+            .panel-body
+              p フライヤー
 
-    section
+    section.member
       .page-header.text-center
-        h2 メンバー
+        h2
+          img(src='image/cat.svg' type="image/svg+xml")
+          |メンバー
       .page-content.clearfix
-        .row
-          .col-sm-3.col-xs-6
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
-                hr
-                ul
-                  li 植木 華織
-                  li 情報メディア創成学類
-                  li ギミック班/フライヤー班/ARアプリ班
-                  li 責任者(傀儡)です、女の子を食べたいです
-                  li Link
+        .col-xs-12
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          .col-xs-3
+            .panel.panel-default.row.text-center
+              img.img-square.member_picture(src='http://makky.io/image/logo_MK_512.png')
+          //- .col-sm-3.col-xs-12
+          //-   .panel.panel-default
+          //-     .panel-body
+          //-       .row
+          //-         .col-xs-3
+          //-           .text-center
+          //-             img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
+          //-         .col-xs-9
+          //-           ul
+          //-             li 植木 華織
+          //-             li 情報メディア創成学類
+          //-             li ギミック班/フライヤー班/ARアプリ班
+          //-             li 責任者(傀儡)です、女の子を食べたいです
+          //-             li Link
 
-          .col-sm-3.col-xs-6
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
-                hr
-                ul
-                  li 金井 啓太
-                  li 情報メディア創成(2年)
-                  li 天井投影班・ギミック班・目玉班・写真加工班・グッズ班・ダイジェスト班
-                  li 副責任者です。お化け屋敷を作るために筑波大学に入りました。
-                  li link
+          //- .col-sm-3.col-xs-12
+          //-   .panel.panel-default
+          //-     .panel-body
+          //-       .text-center
+          //-         img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
+          //-       hr
+          //-       ul
+          //-         li 金井 啓太
+          //-         li 情報メディア創成(2年)
+          //-         li 天井投影班・ギミック班・目玉班・写真加工班・グッズ班・ダイジェスト班
+          //-         li 副責任者です。お化け屋敷を作るために筑波大学に入りました。
+          //-         li link
 
-          .col-sm-3.col-xs-6
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
-                hr
-                ul
-                  li 小林 正樹
-                  li 知識情報・図書館学類(2年)
-                  li Web担当
-                  li Javascript
-                  li
-                    a(href='http://makky.io', target='_brank') Link
+        .col-sm-3.col-xs-12
+          .panel.panel-default
+            .panel-body
+              .text-center
+                img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
+              hr
+              ul
+                li 小林 正樹
+                li 知識情報・図書館学類(2年)
+                li Web担当
+                li Javascript
+                li
+                  a(href='http://makky.io', target='_brank') Link
 
-          .col-sm-3.col-xs-6
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
-                hr
-                ul
-                  li なまえ
-                  li 学類
-                  li 担当
-                  li コメント
-                  li Link
+        .col-sm-3.col-xs-12
+          .panel.panel-default
+            .panel-body
+              .text-center
+                img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
+              hr
+              ul
+                li 小林 正樹
+                li 知識情報・図書館学類(2年)
+                li Web担当
+                li Javascript
+                li
+                  a(href='http://makky.io', target='_brank') Link
+
+          //- .col-sm-3.col-xs-12
+          //-   .panel.panel-default
+          //-     .panel-body
+          //-       .text-center
+          //-         img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
+          //-       hr
+          //-       ul
+          //-         li なまえ
+          //-         li 学類
+          //-         li 担当
+          //-         li コメント
+          //-         li Link
