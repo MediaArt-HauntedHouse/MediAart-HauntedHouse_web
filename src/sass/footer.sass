@@ -18,9 +18,21 @@
   .col-cs-12
     padding: 0
 
-  background: $DarkGray
+  background: $Gray
   border-radius: 0
   a
     color: $White
-    &:hover
-      color: $Gray
+    &:first-child:hover
+      color: $Yellow
+    &:last-child:hover
+      color: $Purple
+
+@media (min-width: 768px)
+  .footer
+    .col-sm-8
+      text-align: left
+    .col-sm-4
+      text-align: right
+
+.navbar.navbar-fixed-top
+  display: none

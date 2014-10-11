@@ -13,6 +13,19 @@
   a.async = 1
   a.src = g
   m.parentNode.insertBefore a, m
-) window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga'
+) window, document, 'script', 'http://www.google-analytics.com/analytics.js',
+'ga'
 ga 'create', 'UA-47328611-4', 'auto'
 ga 'send', 'pageview'
+
+$(window).scroll ->
+  if $(window).scrollTop() < 400
+    unless $('.navbar.navbar-fixed-top').css('display') == 'none'
+      $('.navbar.navbar-fixed-top').css {'display': 'none'}
+  else
+    unless $('.navbar.navbar-fixed-top').css('display') == 'block'
+      $('.navbar.navbar-fixed-top').css {'display': 'block'}
+  $('.brand').css {'transform': 'rotate(' + $(window).scrollTop()*0.4 + 'deg)'}
+  $('.article-heading_image').css {
+    'transform':'rotate(' + $(window).scrollTop()*0.4 + 'deg)'
+  }
