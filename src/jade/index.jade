@@ -1,123 +1,14 @@
 extends layout/default
 
-//- block title
-//-   title 
-
 block contents
-  .col-xs-12
-    .row.top-heading
-      .container.text-center
-        img.top-heading_image(src='image/logo.svg' type="image/svg+xml" width="400" height="400")
-        p.lead
-          |学園祭の定番と言えば
-          span.line-marker 『お化け屋敷』。
-          br
-          |今年はそれをテーマに
-          span.line-marker 様々な学類から集まったメンバー
-          |でいろいろな仕掛けを作りました。
-          br
-          |筑波大生の手によってアレンジされたお化け屋敷、是非お越しください！
+  .container-fluid.section-darkgray
+    include view/heading
 
-  .container
-    section
-      .page-header.text-center
-        h2
-          img(src='image/web.svg' type="image/svg+xml")
-          |企画
-      .page-content.clearfix
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center 目玉
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center 投影
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center エレベータ
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center ARアプリ
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center グッズ
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center 写真加工
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center CM
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center Web
-        .col-sm-4.col-xs-12
-          .panel.panel-default
-            .panel-body
-              p.text-center フライヤー
+  .container-fluid.section-black
+    include view/movie
 
-    section.member
-      .page-header.text-center
-        h2
-          img(src='image/cat.svg' type="image/svg+xml")
-          |メンバー
-      .page-content.clearfix
-        .row
-          .col-sm-4.col-xs-12
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='https://pbs.twimg.com/profile_images/378800000618409780/ac357f8359fdf5155cdd14971a2e0617_400x400.jpeg', width='80', height='80')
-                hr
-                ul
-                  li 植木 華織
-                  li 情報メディア創成学類
-                  li ギミック班/フライヤー班/ARアプリ班
-                  li 責任者(傀儡)です、女の子を食べたいです
-                  li Link
+  .container-fluid.section-darkgray
+    include view/project
 
-          .col-sm-4.col-xs-12
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='https://pbs.twimg.com/profile_images/487723166148468737/OwzAI94g_400x400.png', width='80', height='80')
-                hr
-                ul
-                  li 金井 啓太
-                  li 情報メディア創成(2年)
-                  li 天井投影班・ギミック班・目玉班・写真加工班・グッズ班・ダイジェスト班
-                  li 副責任者です。お化け屋敷を作るために筑波大学に入りました。
-                  li link
-
-          .col-sm-4.col-xs-12
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='http://makky.io/image/logo_MK_512.png', width='80', height='80')
-                hr
-                ul
-                  li 小林 正樹
-                  li 知識情報・図書館学類(2年)
-                  li Web担当
-                  li Javascript
-                  li
-                    a(href='http://makky.io', target='_brank') Link
-        .row
-          .col-sm-4.col-xs-12
-            .panel.panel-default
-              .panel-body
-                .text-center
-                  img.img-circle(src='', width='80', height='80')
-                hr
-                ul
-                  li Unknown
-                  li Unknown
-                  li Unknown
-                  li Unknown
-                  li Unknown
+  .container-fluid
+    include view/member

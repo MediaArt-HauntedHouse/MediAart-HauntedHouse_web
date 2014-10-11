@@ -82,7 +82,8 @@ gulp.task 'watch', ->
   gulp.watch 'src/jade/**', ['jade']
   gulp.watch 'src/coffee/**', ['coffee']
   gulp.watch 'src/sass/**', ['sass']
-  gulp.watch 'src/**', ['livereload']
+  gulp.watch 'src/image/**', ['copy']
+  gulp.watch 'dst/**', ['livereload']
 
 gulp.task 'livereload', ->
   gulp.src ''
