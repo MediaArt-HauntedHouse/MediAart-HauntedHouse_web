@@ -40,6 +40,54 @@
     max-width: 768px
     margin: 0 auto
 
+.article-info
+  .article-info_table
+    font-size: 16px
+    max-width: 512px
+    margin: 24px auto
+
+.article-share
+  max-width: 768px
+  margin: 24px auto
+  .article-share-btn_twitter,
+  .article-share-btn_facebook,
+  .article-share-btn_google_plus
+    width: 188px
+    margin: 3px
+    color: $White
+    background: $Blue
+    border-color: $Blue
+    text-decoration: none
+    border-radius: 10px
+    z-index: 1
+    transform: translate3d(0, -1px, 0)
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: inherit
+      border-bottom: 2px solid $Gray
+      opacity: .7
+      z-index: -1
+      border-radius: 10px
+      transform: translate3d(0, 5px, 0)
+    &:active
+      box-shadow: none
+      transform: translate3d(0, 1px, 0)
+      &::before
+        opacity: 0
+
+  .article-share-btn_facebook
+    background: $DarkBlue
+    border: $DarkBlue
+
+  .article-share-btn_google_plus
+    background: $Pink
+    border: $Pink
+
 .article-movie
   .video
     position: relative

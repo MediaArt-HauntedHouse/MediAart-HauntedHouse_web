@@ -18,6 +18,7 @@
 ga 'create', 'UA-47328611-4', 'auto'
 ga 'send', 'pageview'
 
+# App
 $(window).scroll ->
   if $(window).scrollTop() < 400
     unless $('.navbar.navbar-fixed-top').css('display') == 'none'
