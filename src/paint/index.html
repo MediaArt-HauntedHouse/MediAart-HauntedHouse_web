@@ -2,155 +2,120 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
-	<title>paint</title>
-	<style type="text/css">
-		body {
-			user-select:none;
-			-webkit-user-select:none;
-			-moz-user-select:none;
-			-khtml-user-select:none;
-			-webkit-user-drag:none;
-			-khtml-user-drag:none;
-			background-color: #808080;
-			padding-bottom: 200px;
-		}
-
-		/*キャンバス*/
-		#a_canvas {
-			background-color: #ffffff;
-			width: 600px;
-			height: 450px;
-		}
-
-		/*箱*/
-		.container {
-			width: 600px;
-		}
-
-		/*画像の大きさ*/
-		.stack {
-			width: 600px;
-			margin: 5px;
-		}
-		.stackone {
-			height: 75px;
-			width: 75px;
-			margin: 5px;
-		}
-
-		/*カラーボックス*/
-		.container > div {
-			position: relative;
-			display: inline-block;
-		}
-		#colormenu {
-			position: absolute;
-			top: 80px;
-			height: 120px;
-			width : 103px;
-			display: none;
-			background-color: white;
-		}
-
-	</style>
+  <meta charset="utf-8">
+  <title>paint</title>
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+  <link rel="stylesheet" href="style.css"/>
+  <script src="jquery-2.1.1.min.js"></script>
+  <script src="paint.js"></script>
 </head>
 
 <body>
-	<div class="container">
-		<img class="stack" src="png/logo.png" alt="logo">
-		<canvas id="a_canvas"></canvas>
-		<script>
-		</script>
-		<div><img id="pencil" class="stackone" src="png/pen.png"></div>
-		<div><img id="eraser" class="stackone" src="png/keshi.png"></div>
-		<div><img id="bold" class="stackone" src="png/plus.png"></div>
-		<div><img id="thin" class="stackone" src="png/minus.png"></div>
-		<div>
-			<div id="colormenu">
-				<span class="color-candidate" data-color="#E60012">
-					<font color="#E60012">■</font>
-				</span>
-				<span class="color-candidate" data-color="#EB6100">
-					<font color="#EB6100">■</font>
-				</span>
-				<span class="color-candidate" data-color="#F39800">
-					<font color="#F39800">■</font>
-				</span>
-				<span class="color-candidate" data-color="#FCC800">
-					<font color="#FCC800">■</font>
-				</span>
-				<span class="color-candidate" data-color="#FFF100">
-					<font color="#FFF100">■</font>
-				</span>
-				<span class="color-candidate" data-color="#CFDB00">
-					<font color="#CFDB00">■</font>
-				</span>
-				<span class="color-candidate" data-color="#8fc31f">
-					<font color="#8fc31f">■</font>
-				</span>
-				<span class="color-candidate" data-color="#22ac38">
-					<font color="#22ac38">■</font>
-				</span>
-				<span class="color-candidate" data-color="#009944">
-					<font color="#009944">■</font>
-				</span>
-				<span class="color-candidate" data-color="#009b6b">
-					<font color="#009b6b">■</font>
-				</span>
-				<span class="color-candidate" data-color="#009e96">
-					<font color="#009e96">■</font>
-				</span>
-				<span class="color-candidate" data-color="#00a0c1">
-					<font color="#00a0c1">■</font>
-				</span>
-				<span class="color-candidate" data-color="#00a0e9">
-					<font color="#00a0e9">■</font>
-				</span>
-				<span class="color-candidate" data-color="#0086d1">
-					<font color="#0086d1">■</font>
-				</span>
-				<span class="color-candidate" data-color="#0068b7">
-					<font color="#0068b7">■</font>
-				</span>
-				<span class="color-candidate" data-color="#00479d">
-					<font color="#00479d">■</font>
-				</span>
-				<span class="color-candidate" data-color="#1d2088">
-					<font color="#1d2088">■</font>
-				</span>
-				<span class="color-candidate" data-color="#601986">
-					<font color="#601986">■</font>
-				</span>
-				<span class="color-candidate" data-color="#920783">
-					<font color="#920783">■</font>
-				</span>
-				<span class="color-candidate" data-color="#be0081">
-					<font color="#be0081">■</font>
-				</span>
-				<span class="color-candidate" data-color="#e4007f">
-					<font color="#e4007f">■</font>
-				</span>
-				<span class="color-candidate" data-color="#e5006a">
-					<font color="#e5006a">■</font>
-				</span>
-				<span class="color-candidate" data-color="#e5004f">
-					<font color="#e5004f">■</font>
-				</span>
-				<span class="color-candidate" data-color="#e60033">
-					<font color="#e60033">■</font>
-				</span>
-				<span class="color-candidate" data-color="#000000">
-					<font color="#000000">■</font>
-				</span>
-			</div>
-			<img id="colorchange" class="stackone" src="png/color.png">
-		</div>
-		<div><img id="save" class="stackone" src="png/kansei.png"></div>
-	</div>
-	<script src="jquery-2.1.1.min.js"></script>
-	<script src="paint.js"></script>
-	<script src="cpick.js"></script>
+  <div class="container">
+    <img class="stack" src="png/logo.png" alt="logo">
+  </div>
+
+  <div class="container">
+    <canvas id="canvas" width="600" height="450"></canvas>
+  </div>
+
+  <div class="container">
+    <div id="pencil">
+      <img class="stackone" src="png/pen.png">
+    </div>
+    <div id="eraser">
+      <img class="stackone" src="png/keshi.png">
+    </div>
+    <div id="bold">
+      <img class="stackone" src="png/plus.png">
+    </div>
+    <div id="thin">
+      <img class="stackone" src="png/minus.png">
+    </div>
+    <div id="colorchange">
+      <div id="colormenu">
+        <span class="color-candidate" data-color="#E60012">
+          <font color="#E60012">■</font>
+        </span>
+        <span class="color-candidate" data-color="#EB6100">
+          <font color="#EB6100">■</font>
+        </span>
+        <span class="color-candidate" data-color="#F39800">
+          <font color="#F39800">■</font>
+        </span>
+        <span class="color-candidate" data-color="#FCC800">
+          <font color="#FCC800">■</font>
+        </span>
+        <span class="color-candidate" data-color="#FFF100">
+          <font color="#FFF100">■</font>
+        </span>
+        <span class="color-candidate" data-color="#CFDB00">
+          <font color="#CFDB00">■</font>
+        </span>
+        <span class="color-candidate" data-color="#8fc31f">
+          <font color="#8fc31f">■</font>
+        </span>
+        <span class="color-candidate" data-color="#22ac38">
+          <font color="#22ac38">■</font>
+        </span>
+        <span class="color-candidate" data-color="#009944">
+          <font color="#009944">■</font>
+        </span>
+        <span class="color-candidate" data-color="#009b6b">
+          <font color="#009b6b">■</font>
+        </span>
+        <span class="color-candidate" data-color="#009e96">
+          <font color="#009e96">■</font>
+        </span>
+        <span class="color-candidate" data-color="#00a0c1">
+          <font color="#00a0c1">■</font>
+        </span>
+        <span class="color-candidate" data-color="#00a0e9">
+          <font color="#00a0e9">■</font>
+        </span>
+        <span class="color-candidate" data-color="#0086d1">
+          <font color="#0086d1">■</font>
+        </span>
+        <span class="color-candidate" data-color="#0068b7">
+          <font color="#0068b7">■</font>
+        </span>
+        <span class="color-candidate" data-color="#00479d">
+          <font color="#00479d">■</font>
+        </span>
+        <span class="color-candidate" data-color="#1d2088">
+          <font color="#1d2088">■</font>
+        </span>
+        <span class="color-candidate" data-color="#601986">
+          <font color="#601986">■</font>
+        </span>
+        <span class="color-candidate" data-color="#920783">
+          <font color="#920783">■</font>
+        </span>
+        <span class="color-candidate" data-color="#be0081">
+          <font color="#be0081">■</font>
+        </span>
+        <span class="color-candidate" data-color="#e4007f">
+          <font color="#e4007f">■</font>
+        </span>
+        <span class="color-candidate" data-color="#e5006a">
+          <font color="#e5006a">■</font>
+        </span>
+        <span class="color-candidate" data-color="#e5004f">
+          <font color="#e5004f">■</font>
+        </span>
+        <span class="color-candidate" data-color="#e60033">
+          <font color="#e60033">■</font>
+        </span>
+        <span class="color-candidate" data-color="#000000">
+          <font color="#000000">■</font>
+        </span>
+      </div>
+      <img class="stackone" src="png/color.png">
+    </div>
+    <div id="post">
+      <img class="stackone" src="png/kansei.png">
+    </div>
+  </div>
 </body>
+
 </html>

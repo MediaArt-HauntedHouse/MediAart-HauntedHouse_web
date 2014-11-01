@@ -1,0 +1,57 @@
+body{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-drag:none;
+  -khtml-user-drag:none;
+  background-color: #808080;
+  padding-bottom: 200px;
+}
+
+#canvas{
+  background-color: #ffffff;
+  width: 600px;
+  height: 450px;
+}
+
+.container{
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stack{
+  width: 600px;
+  margin: 5px;
+}
+
+.stackone{
+  height: 75px;
+  width: 75px;
+  margin: 5px;
+}
+
+.container > div{
+  position: relative;
+  display: inline-block;
+}
+
+#colormenu{
+  position: absolute;
+  top: -80px;
+  z-index: 10;
+  height: 240px;
+  width : 210px;
+  background: #ffffff;
+  border: 1px #acacac solid;
+}
+
+.color-candidate{
+  font-size: 32px;
+}
+
+.color-candidate font{
+  display: inline-block
+  cursor: hand;
+}
