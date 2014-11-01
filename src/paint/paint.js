@@ -3,6 +3,7 @@ $(function(){
   var ctx = canvas.getContext('2d');
   var borderWidth = 10;
   var isDrawing = false;
+  ctx.lineWidth = 10;
   $('#colormenu').hide();
 
   $('#canvas')
@@ -22,6 +23,7 @@ $(function(){
         x = thisX - $(this).offset().left - borderWidth;
         y = thisY - $(this).offset().top - borderWidth;
         ctx.beginPath();
+        ctx.lineCap = "round"
         ctx.moveTo(startX, startY);
         ctx.lineTo(x, y);
         ctx.stroke();
@@ -58,8 +60,12 @@ $(function(){
               }
           },
           success:function(data, dataType){
+            alert('完成しました！');
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 600, 450);
           },
           error: function(XMLHttpRequest, textStatus, errorThrown){
+            alert('失敗しました');
           }
           
       });
