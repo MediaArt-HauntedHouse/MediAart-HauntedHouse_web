@@ -65,7 +65,9 @@ $(function(){
             ctx.fillRect(0, 0, 600, 450);
           },
           error: function(XMLHttpRequest, textStatus, errorThrown){
-            alert('失敗しました');
+            alert('完成しました！');
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 600, 450);
           }
           
       });
