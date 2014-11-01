@@ -43,6 +43,8 @@ gulp.task 'sass', ->
 gulp.task 'copy', ->
   gulp.src 'src/image/**', {base: 'src/image'}
     .pipe gulp.dest 'dst/image/'
+  gulp.src 'src/paint/**', {base: 'src/paint'}
+    .pipe gulp.dest 'dst/paint/'
 
 gulp.task 'bower', ->
   bower.commands.install().on 'end', (installed) ->
