@@ -5,6 +5,9 @@ $(function(){
   var isDrawing = false;
   ctx.lineWidth = 10;
   $('#colormenu').hide();
+  ctx.fillStyle = '#000000';
+  ctx.strokeStyle = '#ffffff'
+  ctx.fillRect(0, 0, 600, 450);
 
   $('#canvas')
     .on('touchstart mousedown', function(e){
@@ -61,7 +64,7 @@ $(function(){
           },
           success:function(data, dataType){
             alert('完成しました！');
-            ctx.fillStyle = '#ffffff';
+            ctx.fillStyle = '#000000';
             ctx.fillRect(0, 0, 600, 450);
           },
           error: function(XMLHttpRequest, textStatus, errorThrown){
@@ -74,12 +77,12 @@ $(function(){
   });
 
   $('#pencil').click(function(){
-    ctx.strokeStyle = '#000000'
+    ctx.strokeStyle = '#ffffff'
     ctx.lineWidth = 10;
   });
 
   $('#eraser').click(function(){
-    ctx.strokeStyle = '#ffffff'
+    ctx.strokeStyle = '#000000'
     ctx.lineWidth = 30;
   });
 
