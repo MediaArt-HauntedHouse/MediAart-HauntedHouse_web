@@ -69,7 +69,7 @@ $(function(){
           },
           error: function(XMLHttpRequest, textStatus, errorThrown){
             alert('完成しました！');
-            ctx.fillStyle = '#ffffff';
+            ctx.fillStyle = '#000000';
             ctx.fillRect(0, 0, 600, 450);
           }
           
